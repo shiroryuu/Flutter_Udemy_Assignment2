@@ -122,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   List<Widget> _buildLandscapeContent(
     MediaQueryData mediaQuery,
-    AppBar appBar,
+    PreferredSizeWidget appBar,
     Widget txListWidget,
   ) {
     return [
@@ -152,8 +152,8 @@ class _MyHomePageState extends State<MyHomePage> {
     ];
   }
 
-  Widget _appScaffold(
-      Widget appBar, Widget pageBody, Widget floatingActionButton) {
+  Widget _appScaffold(PreferredSizeWidget appBar, Widget pageBody,
+      Widget floatingActionButton) {
     return Platform.isIOS
         ? CupertinoPageScaffold(
             child: pageBody,
@@ -171,7 +171,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ? CupertinoNavigationBar(
             middle: Text(
               title,
+              style: Theme.of(context).textTheme.headline6,
             ),
+            backgroundColor: Theme.of(context).primaryColor,
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
