@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
               headline6: TextStyle(
                 fontFamily: 'OpenSans',
                 fontSize: 18,
+                color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
               button: TextStyle(color: Colors.white),
